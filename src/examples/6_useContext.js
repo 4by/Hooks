@@ -7,12 +7,12 @@ function App() {
   const ContextSetter = React.createContext()
 
   // useContext считывает контекст
- const GetContext = () => {
+  const ContextGetter = () => {
     return useContext(ContextSetter)
   }
 
   // Provider передает контекст, стейт хранит  состояние контекста
- const ContextLoader = ({ children }) => {
+  const ContextLoader = ({ children }) => {
 
     const [alertState, setAlertState] = useState(false)
     const toggle = () => setAlertState(prev => !prev)
@@ -29,11 +29,11 @@ function App() {
   }
 
   //использует вышеуказанные возможности контекста
- const TagWithContext = () => {
+  const TagWithContext = () => {
     return (
       <>
-        {(!GetContext().visible) ? (<p onClick={GetContext().toggle}>важное сообщение</p>) : false}
-        <button onClick={GetContext().toggle}>Показать alert</button>
+        {(!ContextGetter().visible) ? (<p onClick={ContextGetter().toggle}>важное сообщение</p>) : false}
+        <button onClick={ContextGetter().toggle}>Показать alert</button>
       </>
     )
   }

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-function App() {
+const App = () => {
 
 
     const loadJson = (arg) => {
@@ -14,7 +14,7 @@ function App() {
     const [type, setType] = useState('users')
     const [data, setData] = useState([])
     //вызывается, когда происходит какой-либо рендер 
-    // связанный с элементом массива (стейт, обьект...)
+    // связанный с элементом массива (стейт, обьект, фунция...)
     // пустой массив - только при загрузке компонента
     // без массива - при любом рендере
     useEffect(() => { loadJson(type); return () => {console.log("тут можно отписаться от стейта")} }, [type])

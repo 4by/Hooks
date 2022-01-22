@@ -11,7 +11,7 @@ function App() {
     return useContext(ContextSetter)
   }
 
-  // Provider передает контекст, стейт хранит  состояние контекста
+  // Provider передает контекст, стейт хранит состояние контекста
   const ContextLoader = ({ children }) => {
 
     const [alertState, setAlertState] = useState(false)

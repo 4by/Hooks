@@ -15,17 +15,15 @@ useEffect(()=>{
     //  setNumState((prev)=>prev+1)
 
     // работает 'между' рендерами, само прибавление не вызывает рендер
-    console.log("первый useRef(количество рендеров)",countRef.current++)
+    console.log("количество рендеров",countRef.current++)
 
-    console.log("третий useRef(предыдущее состояние)", prevRef.current)
+    console.log("предыдущее состояние", prevRef.current)
     
-    console.log("второй useRef (текущее состояние)", inputRef.current.value)
+    console.log("текущее состояние", inputRef.current.value)
     
 })
 
-useEffect(()=>{
-    prevRef.current = valueState
-}, [valueState])
+useEffect(()=>{prevRef.current = valueState}, [valueState])
 
 
     return (
@@ -38,6 +36,9 @@ useEffect(()=>{
 */}
 <input ref={inputRef} type='text' onChange={e => setValueState(e.target.value)} value={valueState}/>
 <button onClick={()=> {inputRef.current.focus()}}>фокус</button>
+<h1>количество рендеров: {countRef.current++}</h1>
+<h1>предыдущее состояние: {prevRef.current}</h1>
+<h1>текущее состояние: {valueState}</h1>
         </>
     )
 

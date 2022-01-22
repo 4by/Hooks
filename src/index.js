@@ -1,8 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+// import App from './examples/1_useState';
+// import App from './examples/2_useEffect';
+// import App from './examples/3_useRef';
+//  import App from './examples/4_useMemo';
+// import App from './examples/5_useCallback';
+ import App from './examples/6_useContext';
 
 ReactDOM.render(
   <React.StrictMode>

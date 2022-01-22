@@ -1,5 +1,5 @@
 import { useState, useCallback } from "react";
- import ItemList from "./5.2_itemList";
+ import ItemList from "./2.2_itemList";
 
 function App() {
 

@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 
-// import App from './examples/1_useState';
-// import App from './examples/2_useEffect';
-// import App from './examples/3_useRef';
-//  import App from './examples/4_useMemo';
-// import App from './examples/5_useCallback';
-//  import App from './examples/6_useContext';
-import App from './examples/7_useReducer';
+//  import App from './basic/1_useState';
+// import App from './basic/2_useEffect';
+//  import App from './basic/3_useContext';
+// import App from './addit/1_useReducer';
+// import App from './addit/2_useCallback';
+//  import App from './addit/3_useMemo';
+import App from './addit/4_useRef';
 
 ReactDOM.render(
   <React.StrictMode>

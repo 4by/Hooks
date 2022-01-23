@@ -1,11 +1,13 @@
+import axios from "axios";
 import { useState, useEffect } from "react";
 
 const App = () => {
 
 
     const loadJson = (arg) => {
-        fetch(`https://jsonplaceholder.typicode.com/${arg}/1`)
-        .then(response => response.json())
+
+
+        axios(`https://jsonplaceholder.typicode.com/${arg}/1`)
         .then(json => setData(json))
     }
     

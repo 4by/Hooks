@@ -7,7 +7,8 @@ import reportWebVitals from './reportWebVitals';
 //  import App from './basic/3_useContext';
 // import App from './addit/1_useReducer';
 //  import App from './addit/2_use(Memo, Callback)';
-import App from './addit/3_useRef';
+// import App from './addit/3_useRef';
+import App from './customHook';
 
 ReactDOM.render(
   <React.StrictMode>

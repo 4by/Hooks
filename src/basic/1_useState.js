@@ -7,13 +7,6 @@ function App() {
     return Math.trunc(Math.random() * 20)
   }
 
-  const initObjState = () => {
-    return {
-      'title': 'objState',
-      'date': Date.now()
-    }
-  }
-
   const incr1 = () => {
     setNumState(numState + 1)
   }
@@ -23,6 +16,24 @@ function App() {
     setNumState((prev) => prev - 1)
     setNumState((prev) => prev - 1)
   }
+
+  //numState: state
+  //setNumState: функция, изменяющая стейт
+  // аргумент useState: начальное значение numState ()
+  const [numState, setNumState] = useState(initNumState)
+
+
+
+
+  
+  const initObjState = () => {
+    return {
+      'title': 'objState',
+      'date': Date.now()
+    }
+  }
+
+
   const updTitle = () => {
     setObjState((prev) => {
       return {
@@ -32,12 +43,6 @@ function App() {
     })
   }
 
-
-
-  //numState: state
-  //setNumState: функция, изменяющая стейт
-  // аргумент useState: начальное значение numState ()
-  const [numState, setNumState] = useState(initNumState)
 
   const [objState, setObjState] = useState(initObjState)
 

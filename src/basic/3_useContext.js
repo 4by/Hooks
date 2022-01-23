@@ -1,10 +1,10 @@
-import React, { useState, useContext } from "react"
+import React, { useState, useContext, createContext } from "react"
 
 
 function App() {
 
   // createContext создает тег с контекстом контекст
-  const ContextSetter = React.createContext()
+  const ContextSetter = createContext()
 
   // useContext считывает контекст
   const ContextGetter = () => {

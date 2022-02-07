@@ -20,7 +20,6 @@ function App() {
 
   const initObjState = () => ({ 'title': 'objState', 'date': Date.now() })
 
-
   const updTitle = () => setObjState(prev => ({ ...prev, date: Date.now() }))
 
   const [objState, setObjState] = useState(initObjState)
@@ -36,8 +35,6 @@ function App() {
       <h1>numState: {numState}</h1>
       <button onClick={incr1}>+1</button>
       <button onClick={decr2}>-2</button>
-
-
 
       <h1>{JSON.stringify(objState, null, 4)}</h1>
       <button onClick={updTitle}>refresh date</button>
